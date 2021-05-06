@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="60">
+ <editorsettings>
+  <export target="../1.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" name="Tileset" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="../../assets/tileset/Tileset.png" width="128" height="96"/>
+ </tileset>
+ <layer id="1" name="bricks" width="40" height="23">
+  <data encoding="csv">
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+30,30,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,30,
+30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,0,0,30,30,0,0,38,38,
+38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,
+0,0,0,0,30,30,30,30,30,30,30,30,30,0,0,30,30,30,30,0,0,38,38,0,0,30,30,30,30,30,30,0,0,0,30,30,0,0,0,0,
+0,0,0,0,38,38,38,38,38,38,38,38,38,0,0,38,38,38,38,0,0,30,30,0,0,38,38,38,38,38,38,0,0,0,38,38,0,0,30,30,
+30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,38,38,
+38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,30,30,
+30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,30,30,
+38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,38,38,
+0,0,0,0,0,0,0,0,0,30,30,30,30,30,30,30,30,30,30,30,30,30,0,0,0,0,0,30,30,30,30,30,30,30,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,38,38,38,38,38,38,38,38,38,38,38,38,38,0,0,0,0,0,38,38,38,38,38,38,38,0,0,0,0,0,0,
+30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,30,
+38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,
+30,30,0,0,0,0,0,0,0,30,30,0,0,0,0,30,30,30,30,30,30,30,0,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,30,30,
+38,38,0,0,0,0,0,0,0,38,38,0,0,0,0,38,38,38,38,38,38,38,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,38,38,
+30,30,0,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,30,0,0,0,0,0,0,0,0,0,
+38,38,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0,0,0,0,0,
+30,30,30,30,30,30,30,30,30,30,30,30,30,0,0,30,30,30,30,30,30,30,0,0,30,30,30,30,30,30,30,30,30,30,30,30,30,30,0,0,
+38,38,38,38,38,38,38,38,38,38,38,38,38,0,0,38,38,38,38,38,38,38,0,0,38,38,38,38,38,38,38,38,38,38,38,38,38,38,0,0
+</data>
+ </layer>
+ <objectgroup color="#aa0000" id="3" name="brickCol">
+  <object id="4" x="0" y="0" width="639.573" height="29.6592">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" x="0.760492" y="30.4197" width="29.6592" height="80.6121">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7" x="0.760492" y="145.254" width="29.6592" height="60.8393">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" x="-0.760492" y="240.315" width="31.9406" height="126.242">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" x="31.9406" y="336.137" width="174.913" height="30.4197">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" x="240.315" y="336.898" width="109.511" height="28.8987">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" x="384.048" y="336.137" width="222.064" height="30.4197">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" x="240.315" y="273.016" width="111.032" height="29.6592">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" x="464.66" y="273.016" width="31.9406" height="62.3603">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="16" x="606.872" y="241.076" width="33.4616" height="63.1208">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="17" x="608.393" y="129.284" width="30.4197" height="78.3306">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="18" x="606.872" y="64.6418" width="31.9406" height="30.4197">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="19" x="335.377" y="64.6418" width="31.9406" height="92.78">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="20" x="399.258" y="112.553" width="95.8219" height="31.1802">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="21" x="544.512" y="79.8516" width="31.1802" height="63.1208">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="22" x="432.72" y="145.254" width="29.6592" height="94.301">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="23" x="465.421" y="209.135" width="76.8096" height="31.9406">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="24" x="143.733" y="209.135" width="207.614" height="28.8987">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="25" x="143.733" y="273.016" width="31.9406" height="62.3603">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="26" x="64.6418" y="113.313" width="142.212" height="29.6592">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="27" x="240.315" y="112.553" width="63.1208" height="31.1802">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="28" x="127.002" y="31.1802" width="33.4616" height="34.2221">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
