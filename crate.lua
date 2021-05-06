@@ -1,36 +1,36 @@
 Crate = {}
-local Crates = {
-  {x = 0, y = 112},
-  {x = 32, y = 112},
-  {x = 0, y = 208},
-  {x = 80, y = 240},
-  {x = 112, y = 240},
-  {x = 144, y = 240},
-  {x = 208, y = 336},
-  {x = 320, y = 336},
-  {x = 352, y = 336},
-  {x = 576, y = 336},
-  {x = 576, y = 208},
-  {x = 608, y = 32},
-  {x = 608, y = 96},
-  {x = 576, y = 96},
-  {x = 608, y = 208},
-  {x = 608, y = 304},
-  {x = 608, y = 336},
-  {x = 320, y = 240},
-  {x = 208, y = 112},
-  {x = 336, y = 32 },
-  {x = 368, y = 112}
-}
+local levelMap = require "levels"
+local CratePos = levelMap:getCrates(1)
+local Crates = {}
+local crate_meta = {}
 
 function Crate:load()
-  self.count = #Crates
-  self.img = love.graphics.newImage("assets/crate.png")
-  self.width = self.img:getWidth()
-  self.height = self.img:getHeight()
+  self.count = #CratePos
+  self:populate()
+end
+
+function Crate:new (i, x, y)
+   local info = {}
+
+   info.__index = i
+   info.img = love.graphics.newImage("assets/crate.png")
+   info.width = info.img:getWidth()
+   info.height = info.img:getHeight()
+   info.x = x or 0
+   info.y = y or 0
+
+   info.body = love.physics.newBody(World, info.x + info.width / 2, info.y + info.height / 2, "static")
+   info.shape = love.physics.newRectangleShape(info.width, info.height)
+   info.fixture = love.physics.newFixture(info.body, info.shape)
+
+   setmetatable(info, crate_meta)
+   return info
 end
 
 function Crate:populate()
+  for i = 1, self.count, 1 do
+    table.insert(Crates, Crate:new(i, CratePos[i].x, CratePos[i].y))
+  end
 end
 
 function Crate:update(dt)
@@ -39,6 +39,6 @@ end
 
 function Crate:draw()
   for i = #Crates, 1, -1 do
-    love.graphics.draw(self.img, Crates[i].x, Crates[i].y)
+    love.graphics.draw(Crates[i].img, Crates[i].x, Crates[i].y)
   end
 end
